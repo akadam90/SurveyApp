@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SurveyAppModelStoreContainer" CdmEntityContainer="SurveyAppEntitiesConnection">
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="SurveyAppModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AppKey" ColumnName="AppKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attributes">
+      <EntityTypeMapping TypeName="SurveyAppModel.Attribute">
+        <MappingFragment StoreEntitySet="Attributes">
+          <ScalarProperty Name="AttrId" ColumnName="AttrId" />
+          <ScalarProperty Name="ParentEntityId" ColumnName="ParentEntityId" />
+          <ScalarProperty Name="AttrDependencyId" ColumnName="AttrDependencyId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EntityDepId" ColumnName="EntityDepId" />
+          <ScalarProperty Name="Indent" ColumnName="Indent" />
+          <ScalarProperty Name="MaxCharacters" ColumnName="MaxCharacters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttributeTypes">
+      <EntityTypeMapping TypeName="SurveyAppModel.AttributeType">
+        <MappingFragment StoreEntitySet="AttributeTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="SurveyAppModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="SurveyAppModel.Entity">
+        <MappingFragment StoreEntitySet="Entity">
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ParentQuestionId" ColumnName="ParentQuestionId" />
+          <ScalarProperty Name="IsDependency" ColumnName="IsDependency" />
+          <ScalarProperty Name="DependentAttrId" ColumnName="DependentAttrId" />
+          <ScalarProperty Name="DependentEntityId" ColumnName="DependentEntityId" />
+          <ScalarProperty Name="QuestionOrder" ColumnName="QuestionOrder" />
+          <ScalarProperty Name="Indent" ColumnName="Indent" />
+          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Surveys">
+      <EntityTypeMapping TypeName="SurveyAppModel.Survey">
+        <MappingFragment StoreEntitySet="Survey">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SurveyLinkInfoes">
+      <EntityTypeMapping TypeName="SurveyAppModel.SurveyLinkInfo">
+        <MappingFragment StoreEntitySet="SurveyLinkInfo">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="SurveyStatusId" ColumnName="SurveyStatusId" />
+          <ScalarProperty Name="ApplicationKey" ColumnName="ApplicationKey" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SurveyResults">
+      <EntityTypeMapping TypeName="SurveyAppModel.SurveyResult">
+        <MappingFragment StoreEntitySet="SurveyResults">
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="AttrId" ColumnName="AttrId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SurveyStatus">
+      <EntityTypeMapping TypeName="SurveyAppModel.SurveyStatu">
+        <MappingFragment StoreEntitySet="SurveyStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SurveyAppModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

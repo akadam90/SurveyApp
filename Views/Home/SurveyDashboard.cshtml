@@ -1,0 +1,96 @@
+﻿@model SurveyApp.Models.SurveyTitleModel
+
+@{
+    ViewBag.Title = "Surveys";
+}
+
+<head>
+<title>    
+</title>    
+    <link href="@Url.Content("~/Content/ui.jqgrid-bootstrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/ui.jqgrid.css")" rel="stylesheet" />    
+    <link href="@Url.Content("~/Content/ui.jqgrid-bootstrap-ui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/ui.jqgrid-override.css")" rel="stylesheet" />    
+    <link href="@Url.Content("~/DataTables/DataTables-1.10.10/css/jquery.dataTables.min.css")" rel="stylesheet" />    
+</head>
+
+
+<h4>@ViewBag.Message</h4>
+<br/>
+<br/>
+<form id="Survey-Dashboard-Form" class="form-horizontal" enctype="multipart/form-data" action="@Url.Action("AddUsers", "api/UploadApi")" method="post">
+    <input type="hidden" id="ClientId" name="ClientId" value="1" />
+    <input type="hidden" id="ApplicationKey" name="ApplicationKey" value="AppLOS101"/>
+    <div class="form-group">
+        <label for="Survey" class="control-label col-lg-2 col-sm-2 col-md-2">Survey</label>
+        <select id="List-Of-Surveys" name="SelectedSurvey" class="form-control col-lg-3 col-sm-3 col-md-3">
+            <option value="0" selected="selected">--Please select a Survey -- </option>
+            @foreach (var s in @Model.titles)
+            {
+                <option value="@s.SurveyId">@s.SurveyTitle</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="User-Name" class="control-label col-lg-2 col-sm-2 col-md-2">Name</label>
+        <input type="text" id="User-Name" name="Name" class="form-control col-lg-3 col-sm-3 col-md-3" />
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-2 col-sm-2 col-md-2">Email</label>
+        <input type="text" id="User-Email" name="Email" class="form-control col-lg-3 col-sm-3 col-md-3" />
+    </div>
+
+    <div class="form-group"><div class="col-lg-2 col-sm-2 col-md-2"></div>
+         <div class="col-lg-2 col-sm-2 col-md-2"><span style="font-family:'Arabic Typesetting'; font:bold;color:blueviolet;font-size:30px">OR</span></div>
+    </div>
+            @*<div><div class="col-lg-2 col-sm-2 col-md-2"></div><div class="col-lg-2 col-sm-2 col-md-2"><button class="btn-primary" type="submit" value="AddSingleUser" id="add-user-to-survey">Add User</button></div><span style="font-family:'Arabic Typesetting'; font:bold;color:blueviolet;font-size:30px">OR</span></div></br>*@
+
+            <div class="form-group">
+                <div class="col-lg-2 col-sm-2 col-md-2"></div>
+                <div class="col-lg-2 col-sm-2 col-md-2">@*<label for="usersFile">Upload</label>*@<input name="usersFile" type="file" /><br /><button type="submit" id="btn-upload-users" value="AddUsersFile" class="btn-primary">Add Users</button></div>
+                @*<div class="col-lg-2 col-sm-2 col-md-2"><div class="col-lg-2 col-sm-2 col-md-2"></div><div class="col-lg-2 col-sm-2 col-md-2"></div></br></div></br>*@
+            </div>
+
+</form>
+
+
+
+
+@*//put grid here*@ 
+<table id="Survey-Grid" class="table table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Link</th>
+            <th>Status</th>
+        </tr>
+</table>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Home/SurveyDashboard.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ux-ajaxform-webapi.js")"></script>
+
+<script type="text/javascript" src="@Url.Content("~/Scripts/grid.locale-en.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.jqGrid.min.js")"></script>
+@*<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.dataTables.min.js")"></script>*@
+<script type="text/javascript" src="@Url.Content("~/DataTables/DataTables-1.10.10/js/jquery.dataTables.min.js")"></script>
+    @*<script type="text/javascript" src="@Url.Content("~/DataTables/datatables.js")"></script>*@
+
+
+    <script type="text/javascript">
+        $(function () {
+            SurveyApp.SurveyDashboard.init({
+            });
+        });
+    </script>
+    }
+
+@section PartialsWithScripts{
+    @Html.Partial("_ErrorForm");
+    }
+
+
+
+

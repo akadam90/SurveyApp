@@ -1,0 +1,267 @@
+﻿.ui-jqgrid .ui-jqgrid-view {
+    font-size: 12px;
+}
+.ui-jqgrid a, .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a, .ui-widget-content a
+{
+    color: #337ab7;
+    text-decoration: underline;
+}
+.ui-jqgrid .ui-state-hover 
+{
+	background-image: none;
+    background-color: transparent;
+	border: 0px none;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight 
+{
+	background-image: none;
+	background-color: #EBEBEB;
+	border: 0px none;
+}
+/* --------------------------------------------------------------
+    [JqGrid]
+-------------------------------------------------------------- */
+.ui-jqgrid .ui-jqgrid-hdiv
+{
+   background-image: none;
+   background-color: transparent;
+}
+
+/***********************************************
+    [Footer for Grid]
+***********************************************/
+.ui-jqgrid-sdiv 
+{
+    background-image: none;
+    background-color: transparent;
+}
+.ui-jqgrid tr.footrow td
+{
+    border-left: 0px none;
+    border-right: 0px none;
+    border-bottom: 0px none;
+    background-image: none;
+    background-color: transparent;
+}
+
+
+.ui-th-column div {
+    color: #555555;
+}
+
+/* --------------------------------------------------------------------
+	Expanding JQ Grid override
+-------------------------------------------------------------------- */
+.ux-grid-wrapper .ui-corner-all 
+{
+	border-radius: 0px;
+}
+.ux-grid-wrapper .ui-widget-content 
+{
+	border: 0px none;
+    background-image: none;
+    background-color: transparent;
+}
+.ux-grid-wrapper .ui-jqgrid 
+{
+	
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-hdiv 
+{
+	
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-htable th div 
+{
+	font-weight: bold;
+}
+.ux-grid-wrapper .ui-row-ltr 
+{
+	border: 0px none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.ux-grid-wrapper .ui-jqgrid .ui-subgrid td.subgrid-data 
+{
+	padding: 0px;
+}
+.ux-grid-wrapper .subgrid-data .ui-widget-content 
+{
+	border: none;
+}
+.ux-grid-wrapper .ui-jqgrid tr.ui-row-ltr td.last-column 
+{
+	
+}
+.ux-grid-wrapper table.ui-jqgrid-btable 
+{
+	border: none;
+	border-width: 0px;
+	
+}
+.ux-grid-wrapper .ui-subgrid .tablediv
+{
+    /*border-left: 1px solid #D3D3D3;*/
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-bdiv 
+{
+	overflow-x: auto;
+	overflow-y: scroll/*scroll*/;
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-bdiv div 
+{
+	height: auto !important;
+}
+.ux-grid-wrapper .ui-subgrid  .ui-jqgrid-bdiv 
+{
+	overflow-y: hidden;
+}
+.ux-grid-wrapper .sub-grid-wrapper
+{
+	width: 100%;
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-bdiv div.grid-temp-height,
+div.grid-temp-height
+{
+	height: 50px !important;
+}
+.ux-grid-wrapper .subgrid-cell, .subgrid-data 
+{
+	border: 0px none;
+}
+
+.ux-grid-wrapper .ui-jqgrid .ui-subgrid td.subgrid-cell {
+    border-right: 1px solid #D3D3D3;
+}
+
+.ux-grid-wrapper .ui-jqgrid tr.jqgfirstrow td, 
+.ux-grid-wrapper .ui-jqgrid tr.ui-row-ltr td, .ui-th-ltr, 
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr
+{
+    /*
+	border-left-width: 0px;
+	border-left-style: none;
+	border-right-width: 0px;
+	border-right-style: none;
+    */
+    border-color: #D3D3D3;
+    border-right: 0px none;
+}
+
+.ux-grid-wrapper .ui-th-column, 
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-htable th.ui-th-column 
+{
+	text-align: left;
+	background-image: none;
+	background-color: Transparent;
+	border: 0px none;
+}
+.ux-grid-wrapper .ui-jqgrid tr.jqgrow td 
+{
+    /*
+	border-top: 0px none;
+	border-bottom: 0px none;
+    */
+	vertical-align: top;
+	padding-top: 5px;
+	border-color: #D3D3D3;
+}
+
+.ux-grid-wrapper .ui-jqgrid .loading 
+{
+    background: white url('../../images/ajax-loader.gif') 2px center no-repeat;
+    text-indent: 20px;
+    /*
+    color: Gray;
+    border-color: Gray;
+    */
+    z-index: 1000;
+    margin-left: -20px;
+}
+
+.ux-grid-wrapper .ui-widget-content .ui-icon-carat-1-sw 
+{
+	background-image: none;
+}
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-pager 
+{
+	background-image: none;
+	background-color: Transparent;
+	border-color: Gray 
+}
+.ui-jqgrid, .ux-grid-wrapper .ui-widget .ui-widget
+{
+	/*font-size: 14px;*/
+}
+
+.grid-button 
+{
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: block;
+}
+.ui-jqgrid .ui-state-hover .grid-button 
+{
+    background: #FBFBFB url('../images/ok_icon_grey.png') center right no-repeat;
+    font-weight: bold;
+}
+.ui-state-highlight .grid-button, .ui-widget-content .ui-state-highlight .grid-button
+{
+    background: #D4EDB5 url('../images/ok_icon.png') center right no-repeat;
+    font-weight: bold;
+}
+
+/***********************************************
+    [Selection Grid]
+***********************************************/
+.selection-grid .ui-jqgrid .ui-state-hover,
+.selection-grid .ui-widget-content .ui-state-hover  
+{
+    background-color: transparent !important;
+}
+
+.selection-grid .ui-state-highlight, 
+.selection-grid .ui-widget-content .ui-state-highlight 
+{
+    background-color: transparent !important;
+}
+
+.hidden-row a
+{
+    color: #cccccc !important;
+}
+
+
+
+.ux-grid-wrapper .ui-jqgrid tr.jqgfirstrow td, 
+.ux-grid-wrapper .ui-jqgrid tr.ui-row-ltr td, 
+.ui-th-ltr, 
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {
+    border-right: 1px solid #D3D3D3 !important;
+}
+.ux-grid-wrapper .ui-th-column, 
+.ux-grid-wrapper .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    border-right: 1px solid #D3D3D3 !important;
+}
+
+.hidden-text {
+    color: #D3D3D3
+}
+
+.ux-grid-wrapper .ui-search-toolbar th,
+.ux-grid-wrapper .ui-search-toolbar td {
+    background-color: transparent;
+    background-image: none;
+}
+
+.ux-grid-wrapper input.ui-widget-content,
+.ux-grid-wrapper select.ui-widget-content
+ {
+    border: 1px solid #aaa;
+}
+
+.ui-jqgrid .ui-subgrid td.subgrid-data {
+    border-bottom: 1px solid #D3D3D3 ;
+    border-right: 1px solid #D3D3D3 ; 
+}

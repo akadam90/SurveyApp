@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Survey Results";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<form id="Survey-Result-form" action="@Url.Action("SaveSurveyResult", "Home")" method="post">
+    <input type="hidden" id="Survey-Id" value="1" />
+    <input type="hidden" id="User-Id" value="1" />
+    <div id="Error-Section"> </div>
+    @*<button id="Get-Survey-btn" type="button" class="button btn-primary">Get Survey</button><br />*@
+    <a id="get-Survey-1">Survey 1 Result </a><br/>
+    <a id="get-User-1-Result">User 1 Result</a>
+
+</form>   
+
+@section scripts
+{
+<script type="text/javascript" src="@Url.Content("~/Scripts/Home/SurveyResult.js")"></script>
+
+    
+<script type="text/javascript">
+    $(document).ready(function () {      
+        SurveyApp.SurveyResultDisplay.init({
+        });
+
+    });
+</script>
+
+}
+
